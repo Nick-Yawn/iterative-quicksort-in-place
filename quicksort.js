@@ -60,7 +60,7 @@ const Quicksort = arr => {
 const printPivot = (pivot, pivotIndex, iterationStartIndex, iterationEndIndex, arr) => {
   let value, string, base;
   console.log( 
-    `pivot:  ${pivot}\t— ` +
+    `pivot: ${pivot}\t— ` +
     ( arr.slice(0,iterationStartIndex).length ?
       arr.slice(0,iterationStartIndex).map(n => { // this allows the values to line up.
         string = ' ';
