@@ -20,6 +20,7 @@ console.time(str);
 Quicksort(array);
 console.timeEnd(str);
 
+console.log(`isSorted: ${isSorted(array)}`);
 
 /*
 const array2 = genUnsortedArray(ARRAY_LENGTH);
@@ -31,7 +32,6 @@ array2.sort( (a,b) => a - b );
 console.timeEnd(str2);
 
 
-console.log(`isSorted: ${isSorted(array)}`);
 
 
 guess what, for 10,000,000 values? mine is faster :)
