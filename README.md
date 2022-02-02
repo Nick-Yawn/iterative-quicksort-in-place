@@ -1,4 +1,5 @@
 To run: `node exec.js`
+
 To pipe output into file: `node exec.js > FILENAME` — WARNING: will override file if already exists.
 
 You may change `ARRAY_LENGTH` in `exec.js`
