@@ -9,7 +9,7 @@ A relatively competitive out-of-place "unsort" is implemented in `gen-unsorted-a
 
 
 
-This quicksort managed to sort an array with 100,000,000 values in about the time it took to scramble it: 23 seconds.
+This quicksort managed to sort an array with 100,000,000 values in about 13 seconds. The unsorting took 22 seconds. 
 
 
 
