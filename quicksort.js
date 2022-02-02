@@ -1,4 +1,4 @@
-const VERBOSE = false;
+const VERBOSE = true;
 
 const Quicksort = arr => {
 
@@ -35,8 +35,8 @@ const Quicksort = arr => {
           arr[i] = arr[pivotIndex + 1]; // I could save ops by not swapping the pivot
           arr[pivotIndex + 1] = pivot;  // until the end of the sort
           arr[pivotIndex] = value;      // however, this will visualize better.
-          pivotIndex++;
-        }
+          pivotIndex++;                 // if you put the printpivot in this if statement.
+        }                               //try it out! you can watch it sort!
       }
       if (VERBOSE) printPivot(pivot, pivotIndex, iterationStartIndex, iterationEndIndex, arr);
       // time to re-stack! front-first.
