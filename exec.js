@@ -1,7 +1,6 @@
-const Quicksort = require('./quicksort');
-const genUnsortedArray = require('./gen-unsorted-array');
+const quicksort = require('./quicksort');
 
-const ARRAY_LENGTH = 25;
+const ARRAY_LENGTH = 20;
 
 const isSorted = array => {
   for( let i = 0; i < ARRAY_LENGTH - 1; i++ ){
@@ -10,17 +9,35 @@ const isSorted = array => {
   return true;
 }
 
+const shuffle = array => {
+  const length = array.length;
+  let temp;
+  let index;
+  for( let i = 0; i < length - 1; i++ ) {
+    index = Math.floor( Math.random() * (length - i - 1) + i + 1);
+    temp = array[index];
+    array[index] = array[i];
+    array[i] = temp;
+  }
+}
+
+// array setup
+const arr = new Array(ARRAY_LENGTH);
+
+for( let i = 0; i < arr.length; i++ ){
+  arr[i] = i;
+}
 // a better shuffle
-const array = genUnsortedArray(ARRAY_LENGTH);
+shuffle(arr);
 
 
 const str = `SORTED ${ARRAY_LENGTH} values:`;
 
 console.time(str);
-Quicksort(array);
+quicksort(arr);
 console.timeEnd(str);
 
-console.log(`isSorted: ${isSorted(array)}`);
+console.log(`isSorted: ${isSorted(arr)}`);
 
 /*
 const array2 = genUnsortedArray(ARRAY_LENGTH);
@@ -36,3 +53,5 @@ console.timeEnd(str2);
 
 guess what, for 10,000,000 values? mine is faster :)
 */
+
+module.exports = shuffle;

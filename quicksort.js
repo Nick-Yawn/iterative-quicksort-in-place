@@ -1,6 +1,6 @@
 const VERBOSE = true;
 
-const Quicksort = arr => {
+const quicksort = arr => {
 
   const array_length = arr.length; // let's only hit this once
   let stack = new Array(); // unlike a queue, stack behavior — pop / push — is constant time.
@@ -79,4 +79,4 @@ const printPivot = (pivot, pivotIndex, iterationStartIndex, iterationEndIndex, a
   // I told you!
 }
 
-module.exports = Quicksort;
+module.exports = quicksort;
