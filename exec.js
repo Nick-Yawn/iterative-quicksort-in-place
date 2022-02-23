@@ -1,4 +1,5 @@
 const quicksort = require('./quicksort');
+const shuffle = require('./shuffle');
 
 const ARRAY_LENGTH = 20;
 
@@ -7,18 +8,6 @@ const isSorted = array => {
     if( array[i] + 1 !== array[i + 1] ) return false;
   }
   return true;
-}
-
-const shuffle = array => {
-  const length = array.length;
-  let temp;
-  let index;
-  for( let i = 0; i < length - 1; i++ ) {
-    index = Math.floor( Math.random() * (length - i - 1) + i + 1);
-    temp = array[index];
-    array[index] = array[i];
-    array[i] = temp;
-  }
 }
 
 // array setup
@@ -34,7 +23,7 @@ shuffle(arr);
 const str = `SORTED ${ARRAY_LENGTH} values:`;
 
 console.time(str);
-quicksort(arr);
+quicksort(arr, true); // second argument is verbose
 console.timeEnd(str);
 
 console.log(`isSorted: ${isSorted(arr)}`);

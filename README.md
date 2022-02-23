@@ -1,17 +1,18 @@
-To run: `node exec.js`
+To run one sort: `node exec.js`. This will run 'verbosely': it will show before and after each pivot.
+
+To change size of one sort, edit `ARRAY_SIZE` in `exec.js`
+
+To run a benchmark, `node benchmark.js`. It is set to loop through powers of 10 — try other loops! It does not run verbosely. Press `<Ctrl-c>` to stop the process.
 
 To pipe output into file: `node exec.js > FILENAME` — WARNING: will override file if already exists.
 
-You may change `ARRAY_LENGTH` in `exec.js`
-
-Set `VERBOSE` flag in quicksort.js
 
 A relatively competitive out-of-place "unsort" is implemented in `gen-unsorted-array.js` — you can take a look, but no need to change anything there.
-UPDATE: implemented Fisher-Yates shuffle, which runs in O(n). Left in gen-unsorted-array for posterity.
+UPDATE: implemented Fisher-Yates shuffle, which runs an in-place perfect shuffle in O(n). Left in gen-unsorted-array for posterity.
 
 
 
-This quicksort managed to sort an array with 100,000,000 values in about 13 seconds, on my machine.
+This quicksort managed to sort an array with 100,000,000 values in about 13 seconds, on my machine. Not bad! 
 
 
 ## Comments
@@ -24,6 +25,3 @@ Insertion sort is faster than quicksort on small arrays. Therefore, one can use 
 
 I currently push more values to the index stack than are required. This could be improved. That being said, Algorithms does not discuss the iterative, as opposed to recursive, versions of sorting algorithms, so this is my own observation.
 
-
-## TODO:
-I should pass the verbose flag to the function itself. Then I can run verbose in exec and not verbose in benchmark!

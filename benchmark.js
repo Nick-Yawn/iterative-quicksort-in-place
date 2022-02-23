@@ -1,15 +1,14 @@
-const shuffle = require('./exec.js');
+const shuffle = require('./shuffle.js');
 const quicksort = require('./quicksort.js');
 
-for( let i = 1; i < 9; i++ ){
+for( let i = 1; i < 10; i++ ){
   let length = 10 ** i
   let array = new Array( length );
 
   for( let i = 0; i < array.length; i++ ){
     array[i] = i;
   }
-  //console.time(str2);
-  shuffle(array);//console.timeEnd(str2);
+  shuffle(array);
 
   let str = `sorting ${stringFormat(length)}`;
   console.time(str);

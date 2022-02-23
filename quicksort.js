@@ -1,6 +1,4 @@
-const VERBOSE = true;
-
-const quicksort = arr => {
+const quicksort = (arr, verbose = false) => {
 
   const array_length = arr.length; // let's only hit this once
   let stack = new Array(); // unlike a queue, stack behavior — pop / push — is constant time.
@@ -28,7 +26,7 @@ const quicksort = arr => {
       // sort between indexes
       pivot = arr[iterationStartIndex];
       pivotIndex = iterationStartIndex;
-      if (VERBOSE) printPivot(pivot, pivotIndex, iterationStartIndex, iterationEndIndex, arr);
+      if (verbose) printPivot(pivot, pivotIndex, iterationStartIndex, iterationEndIndex, arr);
       for( let i = iterationStartIndex; i <= iterationEndIndex; i++ ){
         value = arr[i];
         if( value < pivot ){
@@ -38,7 +36,7 @@ const quicksort = arr => {
           pivotIndex++;                 // if you put the printpivot in this if statement.
         }                               //try it out! you can watch it sort!
       }
-      if (VERBOSE) printPivot(pivot, pivotIndex, iterationStartIndex, iterationEndIndex, arr);
+      if (verbose) printPivot(pivot, pivotIndex, iterationStartIndex, iterationEndIndex, arr);
       // time to re-stack! front-first.
       // we push up to five numbers. These represent the start and ends of the two unsorted halves
       // plus the pivotIndex between them, which is now in the correct spot.
