@@ -43,4 +43,3 @@ console.timeEnd(str2);
 guess what, for 10,000,000 values? mine is faster :)
 */
 
-module.exports = shuffle;
