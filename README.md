@@ -1,3 +1,9 @@
+If you only look at one thing, make it `output25.txt`
+
+# Iterative Quicksort, In-Place, JS
+
+To setup: `git clone`
+
 To run one sort: `node exec.js`. This will run 'verbosely': it will show before and after each pivot.
 
 To change size of one sort, edit `ARRAY_SIZE` in `exec.js`
@@ -12,7 +18,7 @@ UPDATE: implemented Fisher-Yates shuffle, which runs an in-place perfect shuffle
 
 
 
-This quicksort managed to sort an array with 100,000,000 values in about 13 seconds, on my machine. Not bad! 
+This quicksort managed to sort an array with 100,000,000 values in about 15 seconds, on my machine. Not bad! 
 
 
 ## Comments
