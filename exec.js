@@ -5,7 +5,7 @@ const ARRAY_LENGTH = 11;
 
 const isSorted = array => {
   for( let i = 0; i < ARRAY_LENGTH - 1; i++ ){
-    if( array[i] + 1 !== array[i + 1] && array[i] !== arr[i+1] ) return false;
+    if( array[i] + 1 !== array[i + 1] && array[i] !== array[i+1] ) return false;
   }
   return true;
 }
@@ -22,13 +22,11 @@ shuffle(arr);
 arr.push(3, 3);
 
 
-console.log(arr)
 const str = `SORTED ${ARRAY_LENGTH} values:`;
 console.time(str);
 quicksort(arr, true); // second argument is verbose
 console.timeEnd(str);
 console.log(`isSorted: ${isSorted(arr)}`);
-console.log(arr)
 
 
 const arr2 = new Array(ARRAY_LENGTH);
@@ -43,19 +41,4 @@ console.time(str2);
 quicksort(arr2, true); // second argument is verbose
 console.timeEnd(str2);
 console.log(`isSorted: ${isSorted(arr2)}`);
-
-/*
-const array2 = genUnsortedArray(ARRAY_LENGTH);
-
-const str2 = `BUILT_IN SORT:`;
-
-console.time(str2);
-array2.sort( (a,b) => a - b );
-console.timeEnd(str2);
-
-
-
-
-guess what, for 10,000,000 values? mine is faster :)
-*/
 
